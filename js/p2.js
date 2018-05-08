@@ -32,13 +32,23 @@
      	var newName = document.getElementById("name").value;
      	document.getElementById("change").innerHTML = newName;
      	document.getElementById('here').style.display = 'block';
+           
      }
 
      function signUpEs() {
      	// window.open(../courses.html);
-     	document.getElementById('id01').style.display = 'block';
+     	document.getElementById('FL').style.display = 'block';
      }
 
      function signUpIt() {
      	document.getElementById('id02').style.display = 'block';
      }
+     
+        function getFL() {
+     	// window.open(../courses.html);
+     	document.getElementById('FL').style.display = 'block';
+     	var newName = document.getElementById("name").value;
+     	document.getElementById("change")[1].innerHTML = newName;
+     	document.getElementById('here')[1].style.display = 'block';
+     }
+

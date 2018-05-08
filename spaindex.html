@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!-- I would like to add a pop up (modals will do it) video intro on teaching fast-learning language techniques
-Also, I would like to have a pop up asking to choose which languaqe you would like to learn, name and favorite color...
-then...a welcome message comes in a box colored with their favorite color...
-another option would be an interactive navigation map/web showing the techniques/ laguages and themes...
--->
+
 <html>
 <head>
 	<title>Buongiorgio</title>
@@ -21,45 +17,45 @@ another option would be an interactive navigation map/web showing the techniques
 			<ul class="navbar-nav mx-auto">
 				<!--<li style="list-style: none; display: inline"></li>-->
 				<li class="nav-item">
-					<a  href="index.html">Home</a>
+					<a href="index.html">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="courses.html" title="Courses">Courses</a>
+					<a class="nav-link" href="cursos.html" title="Cursos">Cursos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="services.html" title="Services">Services</a>
+					<a class="nav-link" href="servicios.html" title="Servicios">Servicios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="about.html" title="About">About</a>
+					<a class="nav-link" href="quienes.html" title="Quienes somos?">Quienes somos?</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="contact.html" title="contactUs">Contact Us</a>
+					<a class="nav-link" href="contactenos.html" title="Contactenos">Contactenos</a>
 				</li>
-				
-			
 			</ul>
 		</div>
 		<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Languages
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="spaindex.html">Spanish</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="itandex.html">Italian</a></li>
-      
-    </ul>
-  </div>
+			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="menu1" type="button">Lenguajes <span class="caret"></span></button>
+			<ul aria-labelledby="menu1" class="dropdown-menu" role="menu">
+				<li role="presentation">
+					<a href="index.html" role="menuitem" tabindex="-1">Ingl&eacutes</a>
+				</li>
+				<li role="presentation">
+					<a href="itandex.html" role="menuitem" tabindex="-1">Italiano</a>
+				</li>
+			</ul>
+		</div>
 	</nav><!-- The Modal -->
 	<header id="mainContent">
-		<h1>We believe in Connectivity, in Unity</h1>
-		<h2>We just happen to teach languages!</h2><input id="name" placeholder="What is your name?" type="text"> <button class="buttonStyle" onclick="run();">Submit Name</button>
-		<p id="here"><span id="change"></span>, are you ready to learn<span id="changeLanguage"></span>?</p>
+		<h1>Creemos en conectarnos, en unirnos!</h1>
+		<h2>Lo hacemos ense&ntildeando Idiomas!</h2><input id="name" placeholder="t&uacute nombre" type="text"> <button class="buttonStyle" onclick="run();">Nombre</button>
+		<p id="here"><span id="change"></span>, estas listo para aprender?<span id="changeLanguage"></span>?</p>
 		<div id="lessonSignButton">
-			<button id="lessonButton"  onclick="getFL()"class="buttonStyle" style="width:auto;">Yes, Send me a free lesson!</button>
+			<button class="buttonStyle" id="lessonButton" onclick="getFL()" style="width:auto;">Yes, Send me a free lesson!</button>
 			<div class="modal" id="FL">
 				<span class="close" onclick="document.getElementById('FL').style.display='none'" title="Close Modal">&times;</span>
 				<form action="/action_page.php" class="modal-content">
 					<div class="container">
-						<h1 id="nameL"><span class="change"></span>,>Free lesson!</h1>
+						<h1 id="nameL"><span class="change"></span>,get your Free lesson!</h1>
 						<p>Just give us your email and we will send you your FREE lesson!.</p>
 						<hr>
 						<label for="email"><b>Email</b></label> <input name="email" placeholder="Enter Email" required="" type="text"> <label><input checked="checked" name="remember" style="margin-bottom:15px" type="checkbox"> Sign me up for the newsletter!</label>
@@ -139,84 +135,9 @@ another option would be an interactive navigation map/web showing the techniques
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js">
 	</script> 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
-	</script> <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
-	 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
-	 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
-	 
+	</script> 
 	<script src="js/p2.js" type="text/javascript">
 	</script>
-	
-	
-	<!--
-       
-    //          //<img src="https://images.unsplash.com/photo-1423655156442-ccc11daa4e99?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=bf44ec3af7e7faf6936af0144c40d991" alt="New York" style="width:100%">
-    //       }
-          
-    
-    // </script>
-    -->
-	 <!--https://codepen.io/anon/pen/zjdYmW
-sample
-freecodecamp.com
-lifeprint.com
-Catzi...how are you?
-codiram
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_responsive_form
-https://www.w3schools.com/jsref/met_win_open.asp
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
--->
-<h2></h2>
+	<h2></h2>
 </body>
 </html>
-
-<!--
-5/8/18
-free tools to check the responsiveness of a sight
-sheldon norman's suggestion
-browsershots.org
-w3c validator
-to upload a css doc to tell you all the invalid renderings of the code..
-tools to check the validity...if the code is outdated...however...caniuse.com will tell you...
-about the toolkit that you will need
-
-One method we discussed in javascript
-math.min()  gives you the min number...we can create it ourselves...
-e.g.
-function smaller() {
-
-}
-
-lets do it in jsbin
-
-function smaller)(xone,xtwo){
-  if (xone > xtwo){
-    return xtwo;
-    
-  }
-  else
-    {
-//       this is all math.min is doing;
-      return xone;
-    }
-}
-
-console.log(smaller(152,38))
-
-// save states, time states, commercial states...
-// when we see how to use javascript...OMG
-// how would you write your code..
-// eg. prompt
-// first access dom
-// select text to be display in this html element
-// inside the window: please enter your name
-// create two buttons, ok, cancel 
-// if ok T is return, if cancel F is return. 
-deconstructor...to decompose into its components...
-
-polina08...green
-djmcboarder...rivruff
-reallytru...thecentralline
-e7msgt...joeonthego
-add div ad infinitum
--->
