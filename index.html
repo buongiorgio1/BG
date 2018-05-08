@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- I would like to add a pop up video intro on teaching fast-learning language techniques
+<!-- I would like to add a pop up (modals will do it) video intro on teaching fast-learning language techniques
 Also, I would like to have a pop up asking to choose which languaqe you would like to learn, name and favorite color...
 then...a welcome message comes in a box colored with their favorite color...
 another option would be an interactive navigation map/web showing the techniques/ laguages and themes...
@@ -11,86 +11,79 @@ another option would be an interactive navigation map/web showing the techniques
 	<meta content="width=device-width, initial-scale=1" name="viewport"><!--bootstrap-->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"><!--external css-->
 	<link href="css/style.css" rel="stylesheet" type="text/css"><!--Google fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Lora|Orbitron" rel="stylesheet"><!-- icon library -->
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto" rel="stylesheet"><!-- icon library -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light ui-dropdown-menu hide medium-show-inline-block" id="headerNav">
-		
-		<a class="navbar-brand" href="#"></a>
-			<!--<nav class="ui-dropdown-menu hide medium-show-inline-block" >-->
-
-	
-		
-		
-		<!--
-		<p></p><!--create your first link and make sure it works...then repeat...
-		-->
-	
-		<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#toggleNav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
-		
-		<!--<div class="navbar navbar-expand-lg navbar-light ui-menu-item ui-has-subnav expanded" id="navFindTutor">-->
-		<!--	<div class="text-small show-inline-block">-->
-		<!--		<span>Find a Tutor <i class="wc-caret-down wc-white"></i></span>-->
-		<!--	</div>-->
-		<!--	<div class="ui-menu-submenu navbar-nav nav-item ">-->
-		<!--		<div>-->
-		<!--			<a data-wyz-tracking-cat="Tutor Nav" data-wyz-tracking-click="" data-wyz-tracking-label="Search for Tutors" href="/match/search" title="Search for Tutors">Search for Tutors</a>-->
-		<!--		</div>-->
-		<!--		<div>-->
-		<!--			<a data-wyz-tracking-cat="Tutor Nav" data-wyz-tracking-click="" data-wyz-tracking-label="Request a Tutor" href="/emailtutor" title="Request a Tutor">Request a Tutor</a>-->
-		<!--		</div>-->
-		<!--		<div>-->
-		<!--			<a data-wyz-tracking-cat="Tutor Nav" data-wyz-tracking-click="" data-wyz-tracking-label="Online Tutoring" href="/online/student" title="Online Tutoring">Online Tutoring</a>-->
-		<!--		</div>-->
-		<!--	</div>-->
-		<!--</div>-->
-		
+	<nav class=" navbar-expand-lg navbar-light" id="headerNav">
+		<a class="navbar-brand" href="#"></a> <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#toggleNav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="toggleNav">
-		
 			<ul class="navbar-nav mx-auto">
-				<!--<div>-->
-				<li style="list-style: none; display: inline"></li>
-				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Home</a>
-				</li><!--</div>-->
-				<!--<div>-->
-				<li style="list-style: none; display: inline">
-					<a class="nav-link" href="Courses.html" title="Courses">Courses</a>
-				</li>
-				
+				<!--<li style="list-style: none; display: inline"></li>-->
 				<li class="nav-item">
-					<a class="nav-link" href="Services.html" title="Services">Services</a>
-				</li><!--</div>-->
-				<!--<div>-->
-				<li style="list-style: none; display: inline">
-					<a class="nav-link" href="contribute.html" title="About">About</a>
+					<a class="nav-link" href="index.html">Home</a>
 				</li>
-				
-				
-				<!--</div>-->
-				<!--<div>-->
-				<!--<li>-->
-				<!--    <a href="shows.html">Shows</a>-->
-				<!--</li><!==</div>-->
-				<!--<div>-->
-				<!--<li>-->
-				<!--    <a href="testimonials.html">Testimonials</a>-->
-				<!--</li><!==</div>-->
-				<li>
-					<a href="contact.html">Contact Us</a>
+				<li class="nav-item">
+					<a class="nav-link" href="courses.html" title="Courses">Courses</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="services.html" title="Services">Services</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about.html" title="About">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="contact.html" title="contactUs">Contact Us</a>
 				</li>
 			</ul>
 		</div>
-	</nav>
+	</nav><!-- The Modal -->
 	<header id="mainContent">
-		<input type="text" id="name">
-<button onclick="run();">Click</button>
-<p id="here">Hello, <span id="change">?????????</span> How are you doing?</p>
-		<p id="helloText">?</p><button class="buttonStyle" id="clickButton">Yes, this is for me!</button>
-	</header>
-	<h2>Automatic Slideshow</h2>
-	<p>Change image every 2 seconds:</p>
+		<h1>We believe in Connectivity, in Unity</h1>
+		<h2>We just happen to teach languages!</h2><input id="name" placeholder="What is your name?" type="text"> <button class="buttonStyle" onclick="run();">Submit Name</button>
+		<p id="here"><span id="change"></span>, are you ready to learn<span id="changeLanguage"></span>?</p>
+		<div id="lessonSignButton">
+			<button class="buttonStyle" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Yes, Send me a free lesson!</button>
+			<div class="modal" id="id01">
+				<span class="close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
+				<form action="/action_page.php" class="modal-content">
+					<div class="container">
+						<h1>Free lesson!</h1>
+						<p>Just give us your email and we will send you your FREE lesson!.</p>
+						<hr>
+						<label for="email"><b>Email</b></label> <input name="email" placeholder="Enter Email" required="" type="text"> <label><input checked="checked" name="remember" style="margin-bottom:15px" type="checkbox"> Sign me up for the newsletter!</label>
+						<div class="clearfix">
+							<button class="cancelbtn" onclick="document.getElementById('id01').style.display='none'" type="button">Cancel</button> <button class="signupbtn" type="submit">Yes, send my FREE lesson!</button>
+						</div>
+					</div>
+				</form>
+			</div><button class="buttonStyle" id="clickButton" onclick="document.getElementById('id02').style.display='block'">Yes, this is for me!</button>
+			<div class="modal" id="id02">
+				<span class="close" onclick="document.getElementById('id02').style.display='none'" title="Close Modal">&times;</span>
+				<form action="" class="modal-content">
+					<!--<div class="modal" id="myModal">-->
+					<!-- Modal content -->
+					<div class="modal-content">
+						<div class="modal-header">
+							<!--<span class="close">&times;</span>-->
+							<h2>Which language do you want to learn?</h2>
+						</div>
+						<div class="modal-body">
+							<form action="">
+								<!--<input name="motherTongue" type="text" value="Span"> -->
+								<button class="buttonStyle" onclick="document.getElementById('id01').style.display='block'">Spanish</button> <!--<input name="motherTongue" type="button" value="Italian"> -->
+								 <button class="buttonStyle" onclick="signUpI();">Italian</button>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<h3>BG</h3>
+						</div>
+					</div><!--</div>-->
+				</form>
+			</div>
+		</div>
+	</header><!--<h2>Automatic Slideshow</h2>-->
+	<!--<p>Change image every 2 seconds:</p>-->
 	<div class="slideshow-container">
 		<div class="mySlides fade">
 			<div class="numbertext">
@@ -119,33 +112,17 @@ another option would be an interactive navigation map/web showing the techniques
 	</div><br>
 	<div style="text-align:center">
 		<span class="dot"></span><span class="dot"></span><span class="dot"></span>
-	</div><!-- CONTACT INFO -->
-	<!--<div class="span4" id="contact-info">-->
-	<!--    <h3>Contact Us</h3>-->
-	<!--    <p>The information in this website is free and thus unfortunately we cannot provide basic support for it. We simply don't have the time to answer everyone's questions.</p>-->
-	<!--    <p>However, you may contact us about general business inquiries or to report bugs in the template!</p>-->
-	<!--    <p></p>-->
-	<!--    <p><a href="mailto:support@giorgio.com">support@giorgio.com</a></p>-->
-	<!--</div><!== FOOTER -->
+	</div>
 	<div class="footer container container-fluid">
-		
-		<!-- COPYecho "# Natart" >> README.m
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/buongiorgio1/Natart.git
-git push -u origin masterRIGHT - EDIT HOWEVER YOU WANT! -->
 		<div id="copyright">
-			Copyright &copy; 2017 Carp.io<br>
-			Licensed under <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">CC BY 3.0</a>. Built on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>
-		</div><!-- CREDIT - PLEASE LEAVE THIS LINK! -->
+			Copyright &copy; 2018 Georg.io<br>
+			Licensed under <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">CC BY 3.0</a>. Built partially on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> and recycled code.
+		</div>
 		<div id="credits">
 			<a href="https://ide.c9.io/buongiorgio/personal_project">Theme</a> by <a href="http://c9.io">C9</a>
 		</div>
-	</div>
-		<a class="navbar-brand" href="index.html"><img alt="brand logo" id="logo" src="imgs/Logo.jpg" class="img-fluid"></a>
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	
+	</div><a class="navbar-brand" href="index.html"><img alt="brand logo" class="img-fluid" id="logo" src="imgs/Logo.jpg"></a> <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
 	</script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js">
@@ -156,50 +133,28 @@ git push -u origin masterRIGHT - EDIT HOWEVER YOU WANT! -->
 	 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
 	 
 	<script src="js/p2.js" type="text/javascript">
-	</script> <!--
-    // <script>
-    //  // push means 
-    //       var slideIndex=0;
-    //       showSlides();
-    //       function showSlides() {
-    //          var i;
-    //          var slides=document.getElementsByClassName("mySlides");
-    //          var dots=document.getElementsByClassName("dot");
-    //          for (i=0;
-    //          i < slides.length;
-    //          i++) {
-    //              slides[i].style.display="none";
-    //          }
-    //          slideIndex++;
-    //          if (slideIndex > slides.length) {
-    //              slideIndex=1;
-    //          }
-    //          for (i=0;
-    //          i < dots.length;
-    //          i++) {
-    //              dots[i].className=dots[i].className.replace(" active", "");
-    //          }
-    //          slides[slideIndex-1].style.display="block";
-    //          dots[slideIndex-1].className+=" active";
-    //          setTimeout(showSlides, 2500); // Change image every 2 seconds
-    //       }
-          
-    //       var myButton=document.getElementById("clickButton");
-    //       var myText=document.getElementById("helloText");
-    //       myButton.addEventListener('click', doSomething, false);
-    //       function doSomething() {
-    //          myText.textContent="Welcome!!!";
-             
-    //          //myText.onclick= "Welcome";
-            
+	</script>
+	
+	
+	<!--
+       
     //          //<img src="https://images.unsplash.com/photo-1423655156442-ccc11daa4e99?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=bf44ec3af7e7faf6936af0144c40d991" alt="New York" style="width:100%">
     //       }
           
-          
-
-
-
+    
     // </script>
     -->
+	 <!--https://codepen.io/anon/pen/zjdYmW
+sample
+freecodecamp.com
+lifeprint.com
+Catzi...how are you?
+codiram
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_responsive_form
+https://www.w3schools.com/jsref/met_win_open.asp
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
+-->
+	<h2></h2>
 </body>
 </html>

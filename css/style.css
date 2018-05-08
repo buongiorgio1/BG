@@ -8,64 +8,41 @@
 	/*font-family: 'Heebo', sans-serif;*/
 }
 html, body {
-	font-size:16px;
-	
+	font-size: 16px;
 }
 body {
-	font-family: Verdana, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Merriweather', serif; /*  backup family needed*/
 	max-width: 1000px;
 	margin: auto;
 }
 
-/*	width: 100%;*/
-	/*position: relative;*/
-	/*top: 0;*/
-/*	max-width: 1290px;*/
-/*	text-align: center;*/
-/*	z-index: 40;*/
-/*	height:50px;*/
-	/*margin: auto;*/
-	/*max-height: 30px;*/
-	/*background-color: var(--color-palette2);*/
-/*	align-content: center;*/
-	/*padding-right: 30px;*/
-/*	display: flex;*/
-/*	flex:1;*/
-	/*color: #00f;*/
-/*	border-radius: 4px;*/
-/*}*/
-
 #logo {
-	/*z-index: 100000;*/
-	/*height: 70px;*/
-	/*height: 25%;*/
-	/*display:flex;*/
-	/*justify-content:center;*/
-	/*margin-top: 25px;*/
-	position: absolute;
-	top: 1%;
+	position:fixed;
+	/*position: absolute;*/
+	top: 0%;
+	height: 70px;
+	z-index: 2000;
 }
 
-/*.navbar-brand {*/
-/*	z-index: 100000;*/
-/*	height: 1px;*/
+nav {
+	display: flex;
+	justify-content:space-around;
+	background-color: var(--color-palette3);
+	z-index: 1000;
+	width: 100%
+}
+
+/*.span4 {*/
+/*	position: relative;*/
+/*	top: 100px;*/
+
 /*}*/
 nav ul {
-	width: 80%;
-	margin: 0 auto;
-	max-width: 1100px;
-	text-align: center;
-	text-decoration: none;
-	/*background-color: var(--color-palette2);*/
-	/*#36454F*/
-	display: inline-block;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	list-style: none;
-	color: #000;
-	align-content: space-around;
-	padding: 5px;
+	
+	/*margin: 0 auto;*/
+	/*align-items: center;*/
+	/*padding: 5px;*/
 }
 nav ul li {
 	list-style-type: none;
@@ -88,39 +65,47 @@ nav ul li a:hover {
 	background-color: #fff;
 	color: black;
 }
-header {
-	max-width: 1290px;
-	margin: auto;
-	position: relative;
-	top: 1px;
-}
+/*header {*/
+	/*max-width: 1290px;*/
+	/*margin: auto;*/
+	/*position: relative;*/
+	/*top: 100px;*/
+/*}*/
 #mainContent {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: xx-large;
-	font-weight: bold;
-	color: #fff;
-	background-color: #E3F0FB;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	/*font-size: 2rem;*/
+	/*font-weight: bold;*/
+	/*color: #fff;*/
+	/*background-color: --color-palette3;*/
 	border-radius: 4px;
 	padding: 10px;
 	text-align: center;
-	background-image: url("http://www.trbimg.com/img-5660b268/turbine/ct-best-places-to-travel-in-2016-20151202");
+	/*background-image: url("http://www.trbimg.com/img-5660b268/turbine/ct-best-places-to-travel-in-2016-20151202");*/
 	max-width: 1290px;
-	margin: auto;
+	margin: 1%;
+	Z-index:100;
 }
-
+#lessonSignButton{
+	display: flex;
+	justify-content:center;
+	margin-top: 10px;
+}
 .button {
 	background-color: #FFF;
+	font-size: 1rem;
 }
-
 .buttonStyle {
 	border-radius: 4px;
+	font-size: 1rem;
 	/*border: thin solid #F0E020;*/
-	/*padding: 5px;*/
+	padding: 5px;
+	margin: 10px 5px;
 	background-color: #FFF;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	/*font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
 	font-weight: bold;
 	color: #663300;
-	height: : 50px;
+	height : 50px;
+	
 }
 .buttonStyle:hover {
 	border: thin solid #FFCC00;
@@ -133,6 +118,11 @@ header {
 	background-color: #F5FFD2;
 	color: #669900;
 	cursor: pointer;
+}
+
+#here {
+	display: none;
+	margin:5%;
 }
 /** {*/
 
@@ -190,9 +180,9 @@ header {
 
 .fade {
 	-webkit-animation-name: fade;
-	-webkit-animation-duration: 1.5s;
+	-webkit-animation-duration: 5s;
 	animation-name: fade;
-	animation-duration: 1.5s;
+	animation-duration: 5s;
 }
 @-webkit-keyframes fade {
 	from {
@@ -213,24 +203,67 @@ header {
 /* On smaller screens, decrease text size */
 
 @media only screen and (max-width: 300px) {
-	.text {
-		font-size: 11px
+	.text p {
+		font-size: 1rem;
 	}
 }
+@media only screen and (max-width: 900px) {
+	#name {
+		position:relative;
+		background-color: --color-palette4;
+		font-size: .7rem;
+		
+	}
+	.buttonStyle {
+		/*border: 1rem;*/
+	border-radius: 4px;
+	font-size: .7rem;
+	border: solid;
+	padding: 1px 10px;
+	background-color: #FFF;
+	/*font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
+	font-weight: bold;
+	color: #663300;
+	/*height : 40px;*/
+	
+	}
+	h2 {
+		display: none;
+	}
+	
+	h1 {
+		font-size: 2rem;
+	}
+
+	#mainContent {
+	font-size: .5rem;
+	font-weight: bold;
+	margin-top:9%;
+	}
+	
+	#logo {
+	position:fixed;
+	/*position: absolute;*/
+	top: 0%;
+	left: 20%;
+	height: 50px;
+	z-index: 2000;
+}
+}
 #ContactContent {
-	font-family: Arial, Helvetica, sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
 	/*font-size: xx-large;*/
 	font-weight: bold;
-	color: #fff;
-	background-color: #E3F0FB;
+	/*color: #fff;*/
+	background-color: --color-palette4;
 	border-radius: 4px;
 	padding: 10px;
 	text-align: center;
-	background-image: url("http://www.trbimg.com/img-5660b268/turbine/ct-best-places-to-travel-in-2016-20151202");
+	/*background-image: url("http://www.trbimg.com/img-5660b268/turbine/ct-best-places-to-travel-in-2016-20151202");*/
 	max-width: 1290px;
 	margin: auto;
 	position: relative;
-	top: 1px;
+	top: 10px;
 }
 #ContactContent a:link {
 	text-decoration: none;
@@ -252,3 +285,4 @@ header {
 #credits a:link {
 	text-decoration: none;
 }
+
